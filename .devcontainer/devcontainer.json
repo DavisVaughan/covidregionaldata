@@ -23,14 +23,17 @@
 	"extensions": [
 		"ikuyadeu.r",
 		"reditorsupport.r-lsp",
-		"shan.code-settings-sync"
+		"shan.code-settings-sync",
+		"searking.preview-vscode",
+		"tht13.html-preview-vscode",
+		"formulahendry.code-runner"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "R --version",
+	"postCreateCommand": "Rscript -e 'precommit::use_precommit()'",
 
 	// Uncomment to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
